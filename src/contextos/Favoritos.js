@@ -22,7 +22,7 @@ export function useFavoritoContext(){
 
         let novaLista = [...favorito];
 
-        if (! favoritoRepetido){
+        if (!favoritoRepetido){
             novaLista.push(novoFavorito);
             return setFavorito(novaLista);
         }

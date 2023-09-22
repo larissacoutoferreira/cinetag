@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Card({ id, titulo, capa }) {
     console.log(id, titulo, capa)
     const { favorito, adicionarFavorito } = useFavoritoContext();
-    const ehFavorito = favorito.some((fav) => fav.id === id);
+    const ehFavorito = favorito ? favorito.some((fav) => fav.id === id) : false;
     const icone = !ehFavorito ? iconeFavoritar : iconeDesfavoritar;
     return (
         <div className={styles.container}>
